@@ -1,6 +1,6 @@
 #!bin/bash
 
-echo Enter fileName:
+echo -n "Enter fileName : "
 read PROG_NAME
 PROG_NAME="$PROG_NAME.cpp"
 
@@ -10,13 +10,16 @@ if [[ $? != 0 ]]; then
 	echo -e "Error:\n$output"
 else
 	# Compilation successfull
-	echo Have in?
+	echo -n "Input file, press ENTER if not have any : "
 	read input
 
-	if (($input == 1)); then
-		./a.out <in
-	else
+	if
+		[[ -z "$input" ]]
+	then
 		./a.out
+	else
+		./a.out <$input
 	fi
-
 fi
+
+# source: https://stackoverflow.com/questions/59768931/bash-script-to-compile-and-run-c-program
