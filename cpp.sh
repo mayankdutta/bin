@@ -1,5 +1,4 @@
 #!bin/bash
-# https://stackoverflow.com/questions/59768931/bash-script-to-compile-and-run-c-program
 
 echo Enter fileName:
 read PROG_NAME
@@ -11,5 +10,13 @@ if [[ $? != 0 ]]; then
 	echo -e "Error:\n$output"
 else
 	# Compilation successfull
-	./a.out <in
+	echo Have in?
+	read input
+
+	if (($input == 1)); then
+		./a.out <in
+	else
+		./a.out
+	fi
+
 fi
