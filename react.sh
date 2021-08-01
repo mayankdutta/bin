@@ -19,11 +19,11 @@ echo '
       "eject": "react-scripts eject"
     }, '
 
-> craco.config.js
+>craco.config.js
 touch craco.config.js
 
 # For moving content in the file
-cat << EOF >> craco.config.js
+cat <<EOF >>craco.config.js
 
 // craco.config.js
 module.exports = {
@@ -40,8 +40,8 @@ module.exports = {
 EOF
 
 npx tailwindcss init
-> tailwind.config.js
-cat << EOF >> tailwind.config.js
+>tailwind.config.js
+cat <<EOF >>tailwind.config.js
 // tailwind.config.js
   module.exports = {
     purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
@@ -56,9 +56,9 @@ cat << EOF >> tailwind.config.js
   }
 EOF
 
-> ./src/index.css  #for emptying the file
+>./src/index.css #for emptying the file
 
-cat << EOF >> ./src/index.css
+cat <<EOF >>./src/index.css
 /* ./src/index.css */
 @tailwind base;
 @tailwind components;
