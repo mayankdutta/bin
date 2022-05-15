@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo -n "STARTED" # run info.cpp in out
+printf "............................. STARTED ............................\n" # run info.cpp in out
 PROG_NAME=$1
 
 # echo "total length of arguments is $#"
